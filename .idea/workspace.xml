@@ -2,65 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08794bd7-2eb5-4c75-bf7c-d096cfc8ffeb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/CommunityApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/config/AlphaConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/AlphaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/AlphaDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/AlphaDaoHibernateImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/AlphaDaoMyBatisImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/DiscussPostMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/entity/DiscussPost.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/entity/Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/AlphaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/DiscussPostService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/discusspost-mapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/user-mapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/discuss-detail.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/global.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/letter.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/html/student.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/404.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/captcha.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/error.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/letter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/profile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/demo/view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/mail/activation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/mail/forget.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/site/admin/data.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/site/discuss-detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/site/error/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/site/error/500.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/site/followee.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/site/follower.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/site/forget.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/site/letter-detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/site/letter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/site/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/site/my-post.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/site/my-reply.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/site/notice-detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/site/notice.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/site/operate-result.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/site/profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/site/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/site/search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/site/setting.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/yangcofi/community/CommunityApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/yangcofi/community/LoggerTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/yangcofi/community/MapperTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -100,6 +43,7 @@
           <entry key="html" value="3" />
           <entry key="iml" value="1" />
           <entry key="java" value="29" />
+          <entry key="md" value="1" />
           <entry key="properties" value="2" />
           <entry key="xml" value="8" />
         </counts>
@@ -110,6 +54,7 @@
           <entry key="HTML" value="3" />
           <entry key="IDEA_MODULE" value="1" />
           <entry key="JAVA" value="29" />
+          <entry key="Markdown" value="1" />
           <entry key="Properties" value="2" />
           <entry key="XML" value="8" />
         </counts>
@@ -119,26 +64,23 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/CommunityApplication.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="106">
+              <caret line="40" column="21" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#316#317#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/HomeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-284">
-              <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -237,7 +179,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/AlphaController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/DiscussPostMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/yangcofi/community/CommunityApplicationTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/DiscussPostService.java" />
@@ -247,6 +188,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/mapper/user-mapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/logback-spring.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/HomeController.java" />
       </list>
     </option>
   </component>
@@ -327,14 +269,14 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565441853692" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565444019590" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -376,15 +318,16 @@
       <option name="presentableId" value="Default" />
       <updated>1565438224118</updated>
       <workItem from="1565438227291" duration="3636000" />
-      <workItem from="1565441901688" duration="1309000" />
+      <workItem from="1565441901688" duration="2069000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4945000" />
+    <option name="totallyTimeSpent" value="5705000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2533512" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -664,11 +607,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-284">
-          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+        <state relative-caret-position="106">
+          <caret line="40" column="21" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
