@@ -6,11 +6,16 @@ import com.yangcofi.community.service.UserService;
 import com.yangcofi.community.util.CookieUtil;
 import com.yangcofi.community.util.HostHolder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.context.SecurityContextImpl;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.security.Security;
 import java.util.Date;
 
 /**
@@ -45,6 +50,10 @@ public class LoginTicketInterceptor implements HandlerInterceptor {
                 //在本次请求中持有用户
                 //在多个线程里隔离存这个对象 只要这个请求没有处理完 这个线程就一直还在 当服务器做出相应之后，线程会销毁
                 hostHolder.setUser(user);
+                //构建用户认证的结果，并存入SecurityContext，以便于Security进行授权
+                Authentication authentication = new UsernamePasswordAuthenticationToken(
+                        user, user.getPassword(), userService.getAuthorities(user.getId()));
+                SecurityContextHolder.setContext(new SecurityContextImpl(authentication));
             }
         }
         return true;            //return false的话后面就不会执行了
@@ -63,5 +72,6 @@ public class LoginTicketInterceptor implements HandlerInterceptor {
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
         hostHolder.clear();
+        SecurityContextHolder.clearContext();
     }
 }

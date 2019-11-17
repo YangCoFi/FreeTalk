@@ -4,11 +4,15 @@ import com.google.code.kaptcha.Producer;
 import com.yangcofi.community.entity.User;
 import com.yangcofi.community.service.UserService;
 import com.yangcofi.community.util.CommunityConstant;
+import com.yangcofi.community.util.CommunityUtil;
+import com.yangcofi.community.util.RedisKeyUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CookieValue;
@@ -19,11 +23,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.imageio.ImageIO;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @ClassName LoginController
@@ -45,6 +49,9 @@ public class LoginController implements CommunityConstant {
 
     @Value("${server.servlet.context-path}")
     private String contextPath;
+
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     @RequestMapping(path = "/register", method = RequestMethod.GET)
     public String getRegisterPage(){
@@ -89,13 +96,30 @@ public class LoginController implements CommunityConstant {
     }
 
     @RequestMapping(path = "/kaptcha", method = RequestMethod.GET)
-    public void getKaptcha(HttpServletResponse response, HttpSession session){
+    public void getKaptcha(HttpServletResponse response/*, HttpSession session*/){          //将验证码存在了session里面  在用Redis存储时不用了
         //生成验证码
         String text = kaptchaProducer.createText();
         BufferedImage image = kaptchaProducer.createImage(text);
 
         //将验证码存入session，以便后面使用
-        session.setAttribute("kaptcha", text);
+//        session.setAttribute("kaptcha", text);
+
+        //将验证码存在Redis里面 需要构造key，而key又需要验证码的归属者
+        //验证码的归属
+        String kaptchaOwner = CommunityUtil.generateUUID();
+        //这个东西要发给客户端 客户端需要用Cookie保存
+        Cookie cookie = new Cookie("kaptchaOwner", kaptchaOwner);
+        //设置Cookie的生存时间 60s
+        cookie.setMaxAge(60);
+        //有效路径  设置为整个项目下都有效
+        cookie.setPath(contextPath);
+        response.addCookie(cookie);
+
+        //验证码的归属有了以后，接下来要去存这个验证码
+        String redisKey = RedisKeyUtil.getKaptchaKey(kaptchaOwner);
+        redisTemplate.opsForValue().set(redisKey, text, 60, TimeUnit.SECONDS);                //因为存的就是一个字符串就用opsForValue即可
+        //对登录进行具体的验证时需要用到，所以path = "/login"也要处理
+
 
         //将图片直接输出给浏览器 人工输出
         response.setContentType("image/png");
@@ -109,9 +133,18 @@ public class LoginController implements CommunityConstant {
 
     @RequestMapping(path = "/login", method = RequestMethod.POST)       //路径可以一样，方式不行
     public String login(String username, String password, String code, boolean rememberme,
-                        Model model, HttpSession session, HttpServletResponse response){
+                        Model model, /*HttpSession session,*/ HttpServletResponse response,
+                        @CookieValue("kaptchaOwner") String kaptchaOwner){
         //验证码对不对， 验证码直接在表现层判断出来， 业务层不管
-        String kaptcha = (String) session.getAttribute("kaptcha");
+//        String kaptcha = (String) session.getAttribute("kaptcha");
+        //从Redis中来取 需要key，而key又需要KaptchaOwner，而KaptchaOwner又需要从Cookie里取
+        String kaptcha = null;
+        if (StringUtils.isNotBlank(kaptchaOwner)){
+            //数据没有失效
+            String redisKey = RedisKeyUtil.getKaptchaKey(kaptchaOwner);
+            kaptcha = (String) redisTemplate.opsForValue().get(redisKey);
+        }
+
         if (StringUtils.isBlank(kaptcha) || StringUtils.isBlank(code) || !kaptcha.equalsIgnoreCase(code)){
             model.addAttribute("codeMsg", "验证码不正确!");
             return "/site/login";
@@ -135,6 +168,7 @@ public class LoginController implements CommunityConstant {
     @RequestMapping(path = "/logout", method = RequestMethod.GET)
     public String logout(@CookieValue("ticket") String ticket){
         userService.logout(ticket);
+        SecurityContextHolder.clearContext();
         return "redirect:/login";       //默认get请求
     }
 

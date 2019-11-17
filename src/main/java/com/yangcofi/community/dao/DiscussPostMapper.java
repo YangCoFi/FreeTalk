@@ -17,4 +17,8 @@ public interface DiscussPostMapper {
 
     int insertDiscussPost(DiscussPost discussPost);
 
+    //查询帖子的详情，其实就是根据帖子的id查询到帖子的详细信息 配置文件的 <select id=就是这个方法名
+    DiscussPost selectDiscussPostById(@Param("id") int id);
+
+    int updateCommentCount(@Param("id") int id, @Param("commentCount") int commentCount);
 }

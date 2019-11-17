@@ -1,9 +1,9 @@
 package com.yangcofi.community.config;
 
-import com.yangcofi.community.annotation.LoginRequired;
 import com.yangcofi.community.controller.interceptor.AlphaInterceptor;
 import com.yangcofi.community.controller.interceptor.LoginRequiredInterceptor;
 import com.yangcofi.community.controller.interceptor.LoginTicketInterceptor;
+import com.yangcofi.community.controller.interceptor.MessageInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -20,13 +20,17 @@ public class WebMvcConfig implements WebMvcConfigurer {
     //之前在配置类里主要是声明一个第三方的Bean
     //这里要实现一个接口
     @Autowired
-    AlphaInterceptor alphaInterceptor;
+    private AlphaInterceptor alphaInterceptor;
 
     @Autowired
-    LoginTicketInterceptor loginTicketInterceptor;
+    private LoginTicketInterceptor loginTicketInterceptor;
 
     @Autowired
-    LoginRequiredInterceptor loginRequiredInterceptor;
+    private MessageInterceptor messageInterceptor;
+
+    //这是之前的拦截器方案，现在我们用security来代替
+//    @Autowired
+//    LoginRequiredInterceptor loginRequiredInterceptor;
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
@@ -37,8 +41,10 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addInterceptor(loginTicketInterceptor)      //把这个Bean添加给他就可以了
                 .excludePathPatterns("/**/*.css", "/**/*.js", "/**/*.png", "/**/*.jpg", "/**/*.jpeg");         //浏览器访问静态资源时可以随便访问，不去拦截，因为没有业务逻辑.所有目录下的css等文件都要排除掉;
 
-        registry.addInterceptor(loginRequiredInterceptor)      //把这个Bean添加给他就可以了
-                .excludePathPatterns("/**/*.css", "/**/*.js", "/**/*.png", "/**/*.jpg", "/**/*.jpeg");         //浏览器访问静态资源时可以随便访问，不去拦截，因为没有业务逻辑.所有目录下的css等文件都要排除掉;
+//        registry.addInterceptor(loginRequiredInterceptor)      //把这个Bean添加给他就可以了
+//                .excludePathPatterns("/**/*.css", "/**/*.js", "/**/*.png", "/**/*.jpg", "/**/*.jpeg");         //浏览器访问静态资源时可以随便访问，不去拦截，因为没有业务逻辑.所有目录下的css等文件都要排除掉;
 
+        registry.addInterceptor(messageInterceptor)
+                .excludePathPatterns("/**/*.css", "/**/*.js", "/**/*.png", "/**/*.jpg", "/**/*.jpeg");
     }
 }

@@ -40,10 +40,7 @@ public class LoginRequiredInterceptor implements HandlerInterceptor {
                 response.sendRedirect(request.getContextPath() + "/login");        //从请求中直接取到应用的路径
                 return false;
             }
-
-
         }
-
         return true;
     }
 

@@ -2,62 +2,132 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08794bd7-2eb5-4c75-bf7c-d096cfc8ffeb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/annotation/LoginRequired.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/config/KaptchaConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/config/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/DiscussPostController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/interceptor/AlphaInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/interceptor/LoginRequiredInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/interceptor/LoginTicketInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/LoginTicketMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/entity/LoginTicket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/CommunityConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/CommunityUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/CookieUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/HostHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/MailClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/SensitiveFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sensitive-words.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/html/ajax_demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/mail/demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/yangcofi/community/MailTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/yangcofi/community/SensitiveTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/aspect/AlphaAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/aspect/ServiceLogAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/FollowController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/LikeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/MessageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/SearchController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/advice/ExceptionAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/interceptor/MessageInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/CommentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/MessageMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/elasticsearch/DiscussPostRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/entity/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/entity/Event.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/entity/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/event/EventConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/event/EventProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/ElasticsearchService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/FollowService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/LikeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/MessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/RedisKeyUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/comment-mapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/message-mapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/4004.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/new404.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/discuss.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/yangcofi/community/BlockingQueueTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/yangcofi/community/ElasticsearchTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/yangcofi/community/KafkaTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/yangcofi/community/RedisTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/yangcofi/community/TransactionTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/AlphaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/AlphaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/CommunityApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/CommunityApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/annotation/LoginRequired.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/annotation/LoginRequired.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/DiscussPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/DiscussPostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/interceptor/LoginRequiredInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/interceptor/LoginRequiredInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/interceptor/LoginTicketInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/interceptor/LoginTicketInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/DiscussPostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/DiscussPostMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/LoginTicketMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/LoginTicketMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/entity/DiscussPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/entity/DiscussPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/AlphaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/AlphaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/DiscussPostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/DiscussPostService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/CommunityConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/CommunityConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/CommunityUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/CommunityUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/CookieUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/CookieUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/HostHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/HostHolder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/discusspost-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/discusspost-mapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/global.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/letter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/letter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mail/activation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mail/activation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/forget.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/forget.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/operate-result.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/operate-result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/setting.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/discuss-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/discuss-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/error/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/error/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/500.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/followee.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/followee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/follower.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/follower.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/letter-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/letter-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/letter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/letter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/notice-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/notice-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/notice.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/notice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/yangcofi/community/MapperTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/yangcofi/community/MapperTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/controller/AlphaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yangcofi/community/controller/AlphaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/CommunityApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/annotation/LoginRequired.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/config/AlphaConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/config/KaptchaConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/config/WebMvcConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/controller/AlphaController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/controller/DiscussPostController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/controller/HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/controller/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/controller/interceptor/AlphaInterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/controller/interceptor/LoginRequiredInterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/controller/interceptor/LoginTicketInterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/dao/AlphaDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/dao/AlphaDaoHibernateImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/dao/AlphaDaoMyBatisImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/dao/DiscussPostMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/dao/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yangcofi/community/dao/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/dao/LoginTicketMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/dao/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/entity/DiscussPost.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/entity/LoginTicket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/entity/Page.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/service/AlphaService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/service/DiscussPostService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yangcofi/community/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/global.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/util/CommunityConstant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/util/CommunityUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/util/CookieUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/util/HostHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/util/MailClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/util/SensitiveFilter$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/util/SensitiveFilter$TrieNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yangcofi/community/util/SensitiveFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/discusspost-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/discusspost-mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/letter.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/letter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/mail/activation.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/mail/activation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/forget.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/forget.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/operate-result.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/operate-result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/setting.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/discuss-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/discuss-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/error/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/error/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/followee.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/followee.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/follower.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/follower.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/letter-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/letter-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/letter.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/letter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/notice-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/notice-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/notice.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/notice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/yangcofi/community/MapperTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/yangcofi/community/MapperTests.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -95,74 +165,89 @@
     <session id="1382861281">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="49" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="2" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.14" value="3" />
-          <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.17" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.13" value="3" />
+          <entry key="project.open.time.14" value="8" />
+          <entry key="project.open.time.15" value="3" />
+          <entry key="project.open.time.16" value="3" />
+          <entry key="project.open.time.17" value="5" />
+          <entry key="project.open.time.18" value="4" />
+          <entry key="project.open.time.19" value="2" />
+          <entry key="project.open.time.20" value="1" />
+          <entry key="project.open.time.21" value="2" />
+          <entry key="project.open.time.22" value="4" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.4" value="5" />
+          <entry key="project.open.time.5" value="4" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="54" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="2222" />
-          <entry key="java" value="14631" />
-          <entry key="js" value="490" />
-          <entry key="md" value="1008" />
-          <entry key="properties" value="346" />
+          <entry key="html" value="8280" />
+          <entry key="java" value="45364" />
+          <entry key="js" value="1894" />
+          <entry key="md" value="2649" />
+          <entry key="properties" value="637" />
           <entry key="txt" value="9" />
-          <entry key="xml" value="274" />
+          <entry key="xml" value="2667" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2222" />
-          <entry key="JAVA" value="14631" />
-          <entry key="JavaScript" value="490" />
-          <entry key="Markdown" value="1008" />
+          <entry key="HTML" value="8280" />
+          <entry key="JAVA" value="45364" />
+          <entry key="JavaScript" value="1894" />
+          <entry key="Markdown" value="2649" />
           <entry key="PLAIN_TEXT" value="9" />
-          <entry key="Properties" value="346" />
-          <entry key="SQL" value="2" />
-          <entry key="XML" value="272" />
+          <entry key="Properties" value="637" />
+          <entry key="SQL" value="113" />
+          <entry key="XML" value="2554" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="as" value="1" />
-          <entry key="class" value="7" />
-          <entry key="css" value="1" />
+          <entry key="class" value="46" />
+          <entry key="css" value="6" />
           <entry key="gitignore" value="2" />
-          <entry key="html" value="31" />
+          <entry key="html" value="94" />
           <entry key="iml" value="1" />
           <entry key="init_data" value="1" />
           <entry key="init_schema" value="1" />
-          <entry key="java" value="132" />
-          <entry key="js" value="7" />
-          <entry key="md" value="9" />
-          <entry key="properties" value="5" />
+          <entry key="java" value="458" />
+          <entry key="jpg" value="2" />
+          <entry key="js" value="32" />
+          <entry key="md" value="20" />
+          <entry key="png" value="6" />
+          <entry key="pom" value="2" />
+          <entry key="properties" value="19" />
           <entry key="sql" value="1" />
           <entry key="txt" value="1" />
-          <entry key="xml" value="20" />
+          <entry key="xml" value="62" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="7" />
-          <entry key="CSS" value="1" />
-          <entry key="HTML" value="31" />
+          <entry key="CLASS" value="46" />
+          <entry key="CSS" value="6" />
+          <entry key="HTML" value="94" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="132" />
-          <entry key="JavaScript" value="7" />
-          <entry key="Markdown" value="9" />
+          <entry key="Image" value="8" />
+          <entry key="JAVA" value="458" />
+          <entry key="JavaScript" value="32" />
+          <entry key="Markdown" value="20" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Properties" value="5" />
+          <entry key="Properties" value="19" />
           <entry key="SQL" value="3" />
           <entry key="Scratch" value="1" />
-          <entry key="XML" value="20" />
+          <entry key="XML" value="64" />
         </counts>
       </usages-collector>
     </session>
@@ -170,24 +255,42 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/LoginController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/config/SecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="954">
-              <caret line="125" column="26" selection-start-line="125" selection-start-column="26" selection-end-line="125" selection-end-column="26" />
+            <state relative-caret-position="346">
+              <caret line="59" column="39" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2458#2459#0" expanded="true" />
-                <element signature="e#2494#2495#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/interceptor/AlphaInterceptor.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/MessageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="18" column="63" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
+            <state relative-caret-position="358">
+              <caret line="234" selection-start-line="234" selection-end-line="234" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/site/notice.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2340" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+              <folding>
+                <element signature="e#1344#1370#1" expanded="true" />
+                <element signature="e#1465#1497#1" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -195,50 +298,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/interceptor/LoginTicketInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1740">
-              <caret line="58" column="45" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="376">
+              <caret line="74" column="45" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/DiscussPostController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/DiscussPostService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/DiscussPostMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/discusspost-mapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+            <state relative-caret-position="256">
+              <caret line="170" column="29" selection-start-line="170" selection-start-column="8" selection-end-line="170" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -246,8 +316,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2070">
-              <caret line="31" column="83" lean-forward="true" selection-start-line="31" selection-start-column="83" selection-end-line="31" selection-end-column="83" />
+            <state relative-caret-position="210">
+              <caret line="7" selection-start-line="7" selection-end-line="8" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -255,20 +325,30 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+            <state relative-caret-position="136">
+              <caret line="7" selection-start-line="7" selection-end-line="12" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/UserController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2024">
-              <caret line="33" selection-start-line="33" selection-end-line="33" selection-end-column="24" />
+            <state relative-caret-position="1410">
+              <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#2454#2455#0" expanded="true" />
+                <element signature="e#2489#2490#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/config/AlphaConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -278,9 +358,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="AnnotationType" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -292,57 +373,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/config/AlphaConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/AlphaDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/entity/Page.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/yangcofi/community/CommunityApplicationTests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/AlphaService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/user-mapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/logback-spring.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/HomeController.java" />
-        <option value="$PROJECT_DIR$/sql/init_schema" />
-        <option value="$PROJECT_DIR$/sql/init_data" />
-        <option value="$PROJECT_DIR$/sql/as" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/MailClient.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/yangcofi/community/MailTests.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/mail/demo.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/mail/activation.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/site/register.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/config/KaptchaConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/global.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/entity/LoginTicket.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/yangcofi/community/MapperTests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/CommunityConstant.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/site/operate-result.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/interceptor/AlphaInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/CookieUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/HostHolder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/interceptor/LoginTicketInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/LoginTicketMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/entity/Event.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/comment-mapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/CommentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/LikeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/FollowController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/site/discuss-detail.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/site/letter.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/MessageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/CommentMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/site/notice.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/message-mapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/MessageMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/error/404.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/site/notice-detail.html" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/site/setting.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/annotation/LoginRequired.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/interceptor/LoginRequiredInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/config/WebMvcConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/site/login.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/site/forget.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/SensitiveFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/yangcofi/community/SensitiveTests.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/CommunityUtil.java" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/html/ajax_demo.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/AlphaController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/DiscussPostMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/DiscussPostService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/DiscussPostController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/index.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/CommunityApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/entity/DiscussPost.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/elasticsearch/DiscussPostRepository.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/yangcofi/community/ElasticsearchTests.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/discusspost-mapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/ElasticsearchService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/DiscussPostController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/CommentController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/site/search.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/SearchController.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/annotation/LoginRequired.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/config/RedisConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/interceptor/LoginRequiredInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/HostHolder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/CookieUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/aspect/ServiceLogAspect.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/discuss.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/CommunityUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/event/EventConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/letter.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/SensitiveFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/aspect/AlphaAspect.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/interceptor/MessageInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/config/WebMvcConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/CommunityConstant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/interceptor/LoginTicketInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/index.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/config/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/MessageController.java" />
       </list>
     </option>
   </component>
@@ -380,6 +461,23 @@
     <option name="y" value="-10" />
     <option name="width" value="1350" />
     <option name="height" value="690" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>General</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Duplicates</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -429,6 +527,24 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="community" type="462c0819:PsiDirectoryNode" />
+              <item name="annotation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FreeTalk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FreeTalk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="community" type="462c0819:PsiDirectoryNode" />
+              <item name="aspect" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FreeTalk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FreeTalk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="community" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -439,6 +555,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="community" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FreeTalk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FreeTalk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="community" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="advice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FreeTalk" type="b2602c69:ProjectViewProjectNode" />
@@ -466,7 +592,26 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="community" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="elasticsearch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FreeTalk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FreeTalk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="community" type="462c0819:PsiDirectoryNode" />
               <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FreeTalk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FreeTalk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="community" type="462c0819:PsiDirectoryNode" />
+              <item name="event" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FreeTalk" type="b2602c69:ProjectViewProjectNode" />
@@ -508,15 +653,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FreeTalk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FreeTalk" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FreeTalk" type="b2602c69:ProjectViewProjectNode" />
@@ -577,14 +713,22 @@
             <path>
               <item name="FreeTalk" type="b2602c69:ProjectViewProjectNode" />
               <item name="FreeTalk" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="community" type="462c0819:PsiDirectoryNode" />
+              <item name="BlockingQueueTests.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
+            <path>
+              <item name="FreeTalk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -594,24 +738,28 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="SearchEverywhereHistoryKey" value="loginUser&#9;null&#9;null&#10;index.js&#9;FILE&#9;file://C:/MyProject/FreeTalk/src/main/resources/static/js/index.js&#10;global.j&#9;FILE&#9;file://C:/MyProject/FreeTalk/src/main/resources/static/js/global.js&#10;nonoise&#9;PSI&#9;JAVA://com.google.code.kaptcha.impl.NoNoise" />
+    <property name="SearchEverywhereHistoryKey" value="noti&#9;FILE&#9;file://C:/MyProject/FreeTalk/src/main/resources/templates/site/notice.html&#10;Mess&#9;FILE&#9;file://C:/MyProject/FreeTalk/src/main/java/com/yangcofi/community/controller/MessageController.java&#10;inde&#9;FILE&#9;file://C:/MyProject/FreeTalk/src/main/resources/static/js/index.js&#10;Lo&#9;PSI&#9;JAVA://com.yangcofi.community.controller.LoginController&#10;LoginT&#9;FILE&#9;file://C:/MyProject/FreeTalk/src/main/java/com/yangcofi/community/controller/interceptor/LoginTicketInterceptor.java&#10;getJSONO&#9;PSI&#9;JAVA://com.alibaba.fastjson.JSONArray#getJSONObject&#10;JSON&#9;PSI&#9;JAVA://com.alibaba.fastjson.JSONArray&#10;/letter/list&#9;null&#9;null&#10;tem&#9;PSI&#9;JAVA://com.yangcofi.community.MailTests#templateEngine&#10;hos&#9;PSI&#9;JAVA://com.yangcofi.community.controller.interceptor.LoginRequiredInterceptor#hostHolder&#10;transaction&#9;FILE&#9;file://C:/MyProject/FreeTalk/src/test/java/com/yangcofi/community/TransactionTests.java&#10;transa&#9;PSI&#9;JAVA://com.yangcofi.community.TransactionTests&#10;sear&#9;FILE&#9;file://C:/MyProject/FreeTalk/src/main/resources/templates/site/search.html&#10;Eve&#9;PSI&#9;JAVA://com.yangcofi.community.event.EventConsumer&#10;Commen&#9;PSI&#9;JAVA://com.yangcofi.community.controller.CommentController&#10;Comm&#9;FILE&#9;file://C:/MyProject/FreeTalk/src/main/java/com/yangcofi/community/util/CommunityConstant.java&#10;Netty4Util&#9;PSI&#9;JAVA://org.elasticsearch.transport.netty4.Netty4Utils&#10;lette&#9;FILE&#9;file://C:/MyProject/FreeTalk/src/main/resources/templates/site/letter.html&#10;letter-de&#9;FILE&#9;file://C:/MyProject/FreeTalk/src/main/resources/templates/site/letter-detail.html&#10;discu&#9;FILE&#9;file://C:/MyProject/FreeTalk/src/main/resources/static/js/discuss.js&#10;discuss&#9;FILE&#9;file://C:/MyProject/FreeTalk/src/main/resources/templates/site/discuss-detail.html&#10;Community&#9;FILE&#9;file://C:/MyProject/FreeTalk/src/main/java/com/yangcofi/community/util/CommunityConstant.java&#10;User&#9;FILE&#9;file://C:/MyProject/FreeTalk/src/main/java/com/yangcofi/community/service/UserService.java&#10;LoginTick&#9;PSI&#9;JAVA://com.yangcofi.community.dao.LoginTicketMapper&#10;profile&#9;FILE&#9;file://C:/MyProject/FreeTalk/src/main/resources/templates/site/profile.html&#10;letter-d&#9;FILE&#9;file://C:/MyProject/FreeTalk/src/main/resources/templates/site/letter-detail.html&#10;letter&#9;FILE&#9;file://C:/MyProject/FreeTalk/src/main/resources/static/js/letter.js&#10;UserS&#9;FILE&#9;file://C:/MyProject/FreeTalk/src/main/java/com/yangcofi/community/service/UserService.java&#10;index.html&#9;null&#9;null&#10;discuss-de&#9;FILE&#9;file://C:/MyProject/FreeTalk/src/main/resources/templates/site/discuss-detail.html&#10;communityCO&#9;PSI&#9;JAVA://com.yangcofi.community.util.CommunityConstant&#10;loginUser&#9;null&#9;null&#10;index.js&#9;FILE&#9;file://C:/MyProject/FreeTalk/src/main/resources/static/js/index.js&#10;global.j&#9;FILE&#9;file://C:/MyProject/FreeTalk/src/main/resources/static/js/global.js&#10;nonoise&#9;PSI&#9;JAVA://com.google.code.kaptcha.impl.NoNoise" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566203460542" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573901049366" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Vacation" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\MyProject\FreeTalk\src\main\resources\templates" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MyProject\FreeTalk\src\main\resources\static\img" />
+      <recent name="C:\MyProject\FreeTalk\src\main\resources\mapper" />
       <recent name="C:\MyProject\FreeTalk\src\main\resources" />
       <recent name="C:\MyProject\FreeTalk\src\test\java\com\yangcofi\community" />
       <recent name="C:\MyProject\FreeTalk\src\main\java\com\yangcofi\community" />
-      <recent name="C:\MyProject\FreeTalk\src\main\java\com\yangcofi\community\dao" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -627,20 +775,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.CommunityApplication">
-    <configuration name="CommunityUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.yangcofi.community.util.CommunityUtil" />
-      <module name="FreeTalk" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.yangcofi.community.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MailTests.testHtmlMail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ElasticsearchTests.testDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FreeTalk" />
       <extension name="coverage">
         <pattern>
@@ -649,14 +784,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.yangcofi.community" />
-      <option name="MAIN_CLASS_NAME" value="com.yangcofi.community.MailTests" />
-      <option name="METHOD_NAME" value="testHtmlMail" />
+      <option name="MAIN_CLASS_NAME" value="com.yangcofi.community.ElasticsearchTests" />
+      <option name="METHOD_NAME" value="testDelete" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MailTests.testTextMail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ElasticsearchTests.testInsertList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FreeTalk" />
       <extension name="coverage">
         <pattern>
@@ -665,14 +800,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.yangcofi.community" />
-      <option name="MAIN_CLASS_NAME" value="com.yangcofi.community.MailTests" />
-      <option name="METHOD_NAME" value="testTextMail" />
+      <option name="MAIN_CLASS_NAME" value="com.yangcofi.community.ElasticsearchTests" />
+      <option name="METHOD_NAME" value="testInsertList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MapperTests.testInsertLoginTicket" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ElasticsearchTests.testSearchByRepository" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FreeTalk" />
       <extension name="coverage">
         <pattern>
@@ -681,14 +816,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.yangcofi.community" />
-      <option name="MAIN_CLASS_NAME" value="com.yangcofi.community.MapperTests" />
-      <option name="METHOD_NAME" value="testInsertLoginTicket" />
+      <option name="MAIN_CLASS_NAME" value="com.yangcofi.community.ElasticsearchTests" />
+      <option name="METHOD_NAME" value="testSearchByRepository" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SensitiveTests.testSensitiveFilter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ElasticsearchTests.testSearchByTemplate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FreeTalk" />
       <extension name="coverage">
         <pattern>
@@ -697,8 +832,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.yangcofi.community" />
-      <option name="MAIN_CLASS_NAME" value="com.yangcofi.community.SensitiveTests" />
-      <option name="METHOD_NAME" value="testSensitiveFilter" />
+      <option name="MAIN_CLASS_NAME" value="com.yangcofi.community.ElasticsearchTests" />
+      <option name="METHOD_NAME" value="testSearchByTemplate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ElasticsearchTests.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FreeTalk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yangcofi.community.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yangcofi.community" />
+      <option name="MAIN_CLASS_NAME" value="com.yangcofi.community.ElasticsearchTests" />
+      <option name="METHOD_NAME" value="testUpdate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -713,19 +864,19 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.CommunityApplication" />
-      <item itemvalue="JUnit.MailTests.testTextMail" />
-      <item itemvalue="JUnit.MailTests.testHtmlMail" />
-      <item itemvalue="JUnit.MapperTests.testInsertLoginTicket" />
-      <item itemvalue="JUnit.SensitiveTests.testSensitiveFilter" />
-      <item itemvalue="Application.CommunityUtil" />
+      <item itemvalue="JUnit.ElasticsearchTests.testInsertList" />
+      <item itemvalue="JUnit.ElasticsearchTests.testUpdate" />
+      <item itemvalue="JUnit.ElasticsearchTests.testDelete" />
+      <item itemvalue="JUnit.ElasticsearchTests.testSearchByRepository" />
+      <item itemvalue="JUnit.ElasticsearchTests.testSearchByTemplate" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CommunityUtil" />
-        <item itemvalue="JUnit.SensitiveTests.testSensitiveFilter" />
-        <item itemvalue="JUnit.MapperTests.testInsertLoginTicket" />
-        <item itemvalue="JUnit.MailTests.testHtmlMail" />
-        <item itemvalue="JUnit.MailTests.testTextMail" />
+        <item itemvalue="JUnit.ElasticsearchTests.testSearchByTemplate" />
+        <item itemvalue="JUnit.ElasticsearchTests.testInsertList" />
+        <item itemvalue="JUnit.ElasticsearchTests.testSearchByRepository" />
+        <item itemvalue="JUnit.ElasticsearchTests.testDelete" />
+        <item itemvalue="JUnit.ElasticsearchTests.testUpdate" />
       </list>
     </recent_temporary>
   </component>
@@ -749,44 +900,87 @@
       <workItem from="1565942264143" duration="19817000" />
       <workItem from="1566005888480" duration="17667000" />
       <workItem from="1566188481468" duration="5906000" />
-      <workItem from="1566195276280" duration="7645000" />
+      <workItem from="1566195276280" duration="9761000" />
+      <workItem from="1566363411652" duration="11284000" />
+      <workItem from="1566453821252" duration="4053000" />
+      <workItem from="1566479664269" duration="34000" />
+      <workItem from="1566556849861" duration="979000" />
+      <workItem from="1566609526988" duration="6987000" />
+      <workItem from="1566706125049" duration="4788000" />
+      <workItem from="1566887444433" duration="20712000" />
+      <workItem from="1566994567356" duration="2000" />
+      <workItem from="1566995111637" duration="82000" />
+      <workItem from="1567042391488" duration="12302000" />
+      <workItem from="1567134437165" duration="3222000" />
+      <workItem from="1567147329704" duration="8105000" />
+      <workItem from="1567211811813" duration="9185000" />
+      <workItem from="1567646840504" duration="6675000" />
+      <workItem from="1567746808962" duration="7961000" />
+      <workItem from="1567758196588" duration="2401000" />
+      <workItem from="1567822377825" duration="24115000" />
+      <workItem from="1567904288300" duration="11392000" />
+      <workItem from="1567992873276" duration="10316000" />
+      <workItem from="1568169692034" duration="12201000" />
+      <workItem from="1568273482078" duration="12556000" />
+      <workItem from="1568530289361" duration="8777000" />
+      <workItem from="1568637236383" duration="1229000" />
+      <workItem from="1568707352045" duration="4886000" />
+      <workItem from="1569463652539" duration="20000" />
+      <workItem from="1569478585352" duration="12569000" />
+      <workItem from="1569551298431" duration="9589000" />
+      <workItem from="1569655966098" duration="53000" />
+      <workItem from="1570328048389" duration="2192000" />
+      <workItem from="1570758093316" duration="2602000" />
+      <workItem from="1571482996850" duration="1405000" />
+      <workItem from="1572064437107" duration="19884000" />
+      <workItem from="1572139665538" duration="4898000" />
+      <workItem from="1572250514620" duration="8625000" />
+      <workItem from="1572314514771" duration="14851000" />
+      <workItem from="1572398643274" duration="18819000" />
+      <workItem from="1572482107130" duration="12086000" />
+      <workItem from="1572572330580" duration="2470000" />
+      <workItem from="1573449662778" duration="128000" />
+      <workItem from="1573463716551" duration="1316000" />
+      <workItem from="1573647658553" duration="673000" />
+      <workItem from="1573889626870" duration="5963000" />
+      <workItem from="1573956105210" duration="5498000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MapperTests_testSelectPosts - 2019.08.12 at 18h 48m 59s.xml">
-      <configuration name="MapperTests.testSelectPosts" configurationId="JUnit" />
+    <history-entry file="ElasticsearchTests_testSearchByTemplate - 2019.09.26 at 16h 47m 29s.xml">
+      <configuration name="ElasticsearchTests.testSearchByTemplate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MailTests_testTextMail - 2019.08.13 at 13h 32m 51s.xml">
-      <configuration name="MailTests.testTextMail" configurationId="JUnit" />
+    <history-entry file="ElasticsearchTests_testSearchByTemplate - 2019.09.26 at 16h 48m 25s.xml">
+      <configuration name="ElasticsearchTests.testSearchByTemplate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MailTests_testTextMail - 2019.08.13 at 13h 36m 42s.xml">
-      <configuration name="MailTests.testTextMail" configurationId="JUnit" />
+    <history-entry file="ElasticsearchTests_testSearchByTemplate - 2019.09.26 at 16h 49m 57s.xml">
+      <configuration name="ElasticsearchTests.testSearchByTemplate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MailTests_testTextMail - 2019.08.13 at 13h 40m 53s.xml">
-      <configuration name="MailTests.testTextMail" configurationId="JUnit" />
+    <history-entry file="ElasticsearchTests_testSearchByTemplate - 2019.09.26 at 16h 53m 07s.xml">
+      <configuration name="ElasticsearchTests.testSearchByTemplate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MailTests_testTextMail - 2019.08.13 at 13h 45m 15s.xml">
-      <configuration name="MailTests.testTextMail" configurationId="JUnit" />
+    <history-entry file="ElasticsearchTests_testSearchByRepository - 2019.09.26 at 16h 59m 02s.xml">
+      <configuration name="ElasticsearchTests.testSearchByRepository" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MailTests_testHtmlMail - 2019.08.13 at 13h 58m 27s.xml">
-      <configuration name="MailTests.testHtmlMail" configurationId="JUnit" />
+    <history-entry file="ElasticsearchTests_testSearchByTemplate - 2019.09.26 at 16h 59m 28s.xml">
+      <configuration name="ElasticsearchTests.testSearchByTemplate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MapperTests_testInsertLoginTicket - 2019.08.16 at 16h 02m 34s.xml">
-      <configuration name="MapperTests.testInsertLoginTicket" configurationId="JUnit" />
+    <history-entry file="ElasticsearchTests_testSearchByTemplate - 2019.09.26 at 17h 08m 11s.xml">
+      <configuration name="ElasticsearchTests.testSearchByTemplate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SensitiveTests_testSensitiveFilter - 2019.08.19 at 14h 18m 52s.xml">
-      <configuration name="SensitiveTests.testSensitiveFilter" configurationId="JUnit" />
+    <history-entry file="ElasticsearchTests_testSearchByTemplate - 2019.09.26 at 17h 11m 44s.xml">
+      <configuration name="ElasticsearchTests.testSearchByTemplate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SensitiveTests_testSensitiveFilter - 2019.08.19 at 14h 37m 17s.xml">
-      <configuration name="SensitiveTests.testSensitiveFilter" configurationId="JUnit" />
+    <history-entry file="ElasticsearchTests_testInsertList - 2019.09.26 at 17h 12m 56s.xml">
+      <configuration name="ElasticsearchTests.testInsertList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SensitiveTests_testSensitiveFilter - 2019.08.19 at 14h 37m 40s.xml">
-      <configuration name="SensitiveTests.testSensitiveFilter" configurationId="JUnit" />
+    <history-entry file="ElasticsearchTests_testSearchByTemplate - 2019.09.26 at 17h 13m 44s.xml">
+      <configuration name="ElasticsearchTests.testSearchByTemplate" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95246000" />
+    <option name="totallyTimeSpent" value="405247000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -801,7 +995,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.23927614" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.1997319" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -811,18 +1005,18 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19574468" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.50496453" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32907802" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.09503546" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.33475178" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32907802" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.28936172" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.015602837" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -835,7 +1029,7 @@
       <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23927614" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20710456" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -845,13 +1039,13 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4113475" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.6666667" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.09503546" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.38723403" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32907802" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
@@ -875,166 +1069,102 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/site/letter-detail.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/RedisKeyUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/site/letter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3780" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mail/demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="51" />
+        <state relative-caret-position="370">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/entity/LoginTicket.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.1.8.RELEASE/spring-data-redis-2.1.8.RELEASE.jar!/org/springframework/data/redis/core/ValueOperations.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-870">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="218">
+          <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/entity/Page.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/LikeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        <state relative-caret-position="1560">
+          <caret line="58" column="59" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mail/activation.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/MessageService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="29" />
+        <state relative-caret-position="1410">
+          <caret line="60" column="37" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/site/operate-result.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/MessageMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1260">
-          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+        <state relative-caret-position="1020">
+          <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/JDK1.8/src.zip!/java/lang/ThreadLocal.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/message-mapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1103">
-          <caret line="297" column="17" selection-start-line="297" selection-start-column="17" selection-end-line="297" selection-end-column="17" />
+        <state relative-caret-position="2430">
+          <caret line="81" column="43" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/AlphaDaoMyBatisImpl.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/kafka/spring-kafka/2.2.6.RELEASE/spring-kafka-2.2.6.RELEASE.jar!/org/springframework/kafka/core/KafkaTemplate.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="218">
+          <caret line="104" column="46" selection-start-line="104" selection-start-column="46" selection-end-line="104" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/AlphaDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/FollowService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        <state relative-caret-position="-360">
+          <caret line="34" column="85" selection-start-line="34" selection-start-column="77" selection-end-line="34" selection-end-column="85" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/AlphaDaoHibernateImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/CommunityUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="210">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/site/register.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/letter.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/site/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" column="51" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="51" />
+        <state relative-caret-position="1246">
+          <caret line="83" column="79" selection-start-line="83" selection-start-column="75" selection-end-line="83" selection-end-column="79" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/CookieUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        <state relative-caret-position="-2444">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/HostHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/config/AlphaConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="36" column="26" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/user-mapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="42" column="64" lean-forward="true" selection-start-line="42" selection-start-column="64" selection-end-line="42" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/site/setting.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/FollowController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="72" column="72" selection-start-line="72" selection-start-column="61" selection-end-line="72" selection-end-column="72" />
+          <caret line="55" column="41" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/interceptor/LoginRequiredInterceptor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/profile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="39" column="98" selection-start-line="39" selection-start-column="98" selection-end-line="39" selection-end-column="98" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/config/WebMvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="39" column="56" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/site/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2970">
-          <caret line="99" column="48" selection-start-line="99" selection-start-column="48" selection-end-line="99" selection-end-column="48" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="420">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1045,240 +1175,265 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/annotation/LoginRequired.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/DiscussPostMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="376">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/LoginTicketMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/comment-mapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="36" column="80" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/site/forget.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2628">
-          <caret line="173" column="40" selection-start-line="173" selection-start-column="40" selection-end-line="173" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sensitive-words.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yangcofi/community/LoggerTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" selection-start-line="10" selection-end-line="12" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mail/forget.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
-          <caret line="73" column="18" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
-          <folding>
-            <element signature="e#1192#1193#0" expanded="true" />
-            <element signature="e#1221#1222#0" expanded="true" />
-            <element signature="e#1339#1340#0" expanded="true" />
-            <element signature="e#1376#1377#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/MailClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yangcofi/community/SensitiveTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/SensitiveFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="110" column="20" selection-start-line="110" selection-start-column="20" selection-end-line="110" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="72" column="37" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/CommunityUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1132#1133#0" expanded="true" />
-            <element signature="e#1174#1175#0" expanded="true" />
-            <element signature="e#1252#1253#0" expanded="true" />
-            <element signature="e#1305#1306#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/letter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="310">
-            <caret line="59" column="10" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/html/ajax_demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/AlphaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="118" column="31" selection-start-line="118" selection-start-column="31" selection-end-line="118" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="41" column="38" lean-forward="true" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/interceptor/AlphaInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="18" column="63" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/interceptor/LoginTicketInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1740">
-          <caret line="58" column="45" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2070">
-          <caret line="31" column="83" lean-forward="true" selection-start-line="31" selection-start-column="83" selection-end-line="31" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2024">
-          <caret line="33" selection-start-line="33" selection-end-line="33" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="954">
-          <caret line="125" column="26" selection-start-line="125" selection-start-column="26" selection-end-line="125" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2458#2459#0" expanded="true" />
-            <element signature="e#2494#2495#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/DiscussPostController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="780">
+          <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/DiscussPostService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+        <state relative-caret-position="480">
+          <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/DiscussPostMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/dao/CommentMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        <state relative-caret-position="340">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/discusspost-mapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        <state relative-caret-position="300">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="34" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/entity/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="66" column="31" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/entity/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="44" column="37" lean-forward="true" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="48" column="19" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/AlphaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="826">
+          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/CommentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.7.RELEASE/spring-webmvc-5.1.7.RELEASE.jar!/org/springframework/web/servlet/HandlerInterceptor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/penggle/kaptcha/2.3.2/kaptcha-2.3.2.jar!/com/google/code/kaptcha/impl/DefaultKaptcha.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/event/EventConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1920">
+          <caret line="82" column="51" selection-start-line="82" selection-start-column="45" selection-end-line="82" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/event/EventProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="18" column="39" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/aspect/ServiceLogAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.58/fastjson-1.2.58.jar!/com/alibaba/fastjson/JSONArray.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/aspect/AlphaAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/interceptor/LoginRequiredInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/DiscussPostController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2670">
+          <caret line="89" column="21" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/config/KaptchaConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/CookieUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/annotation/LoginRequired.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/config/WebMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/interceptor/MessageInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/util/CommunityConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2610">
+          <caret line="87" column="45" selection-start-line="87" selection-start-column="45" selection-end-line="87" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1410">
+          <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+          <folding>
+            <element signature="e#2454#2455#0" expanded="true" />
+            <element signature="e#2489#2490#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/config/AlphaConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+          <folding>
+            <element signature="e#1344#1370#1" expanded="true" />
+            <element signature="e#1465#1497#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/interceptor/LoginTicketInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="74" column="45" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="170" column="29" selection-start-line="170" selection-start-column="8" selection-end-line="170" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="7" selection-start-line="7" selection-end-line="12" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" selection-start-line="7" selection-end-line="8" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/config/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="59" column="39" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yangcofi/community/controller/MessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="234" selection-start-line="234" selection-end-line="234" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/site/notice.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2340" />
       </provider>
     </entry>
   </component>

@@ -39,4 +39,13 @@ public class DiscussPostService {
 
         return discussPostMapper.insertDiscussPost(post);
     }
+
+    //数据访问层
+    public DiscussPost findDiscussPostById(int id){
+        return discussPostMapper.selectDiscussPostById(id);
+    }
+
+    public int updateCommentCount(int id, int commentCount){
+        return discussPostMapper.updateCommentCount(id, commentCount);
+    }
 }
