@@ -1,9 +1,6 @@
 package com.yangcofi.community.config;
 
-import com.yangcofi.community.controller.interceptor.AlphaInterceptor;
-import com.yangcofi.community.controller.interceptor.LoginRequiredInterceptor;
-import com.yangcofi.community.controller.interceptor.LoginTicketInterceptor;
-import com.yangcofi.community.controller.interceptor.MessageInterceptor;
+import com.yangcofi.community.controller.interceptor.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -28,6 +25,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Autowired
     private MessageInterceptor messageInterceptor;
 
+    @Autowired
+    private DataInterceptor dataInterceptor;
+
     //这是之前的拦截器方案，现在我们用security来代替
 //    @Autowired
 //    LoginRequiredInterceptor loginRequiredInterceptor;
@@ -45,6 +45,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
 //                .excludePathPatterns("/**/*.css", "/**/*.js", "/**/*.png", "/**/*.jpg", "/**/*.jpeg");         //浏览器访问静态资源时可以随便访问，不去拦截，因为没有业务逻辑.所有目录下的css等文件都要排除掉;
 
         registry.addInterceptor(messageInterceptor)
+                .excludePathPatterns("/**/*.css", "/**/*.js", "/**/*.png", "/**/*.jpg", "/**/*.jpeg");
+
+        registry.addInterceptor(dataInterceptor)
                 .excludePathPatterns("/**/*.css", "/**/*.js", "/**/*.png", "/**/*.jpg", "/**/*.jpeg");
     }
 }

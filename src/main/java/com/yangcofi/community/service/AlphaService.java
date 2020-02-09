@@ -6,8 +6,13 @@ import com.yangcofi.community.dao.UserMapper;
 import com.yangcofi.community.entity.DiscussPost;
 import com.yangcofi.community.entity.User;
 import com.yangcofi.community.util.CommunityUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.TransactionDefinition;
 import org.springframework.transaction.TransactionStatus;
@@ -21,9 +26,12 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import java.util.Date;
 
+
 @Service
 //@Scope("prototype")
 public class AlphaService {
+
+    private static final Logger logger = LoggerFactory.getLogger(AlphaService.class);
 
     @Autowired
     private AlphaDao alphaDao;
@@ -128,4 +136,15 @@ public class AlphaService {
         });        //这个方法需要我们传一个接口(回调接口) 可以用匿名的方式实现(直接new0
     }
 
+    //可以让该方法在多线程的情况下异步地调用 如果启动一个线程调用这个方法，是和主线程异步的
+    @Async
+    public void execute1(){
+        logger.debug("execute1");
+    }
+
+    //让这个方法定时地去执行
+    @Scheduled(initialDelay = 10000, fixedRate = 1000)
+    public void execute2(){
+        logger.debug("execute2");
+    }
 }

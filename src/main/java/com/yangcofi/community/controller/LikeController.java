@@ -7,14 +7,18 @@ import com.yangcofi.community.service.LikeService;
 import com.yangcofi.community.util.CommunityConstant;
 import com.yangcofi.community.util.CommunityUtil;
 import com.yangcofi.community.util.HostHolder;
+import com.yangcofi.community.util.RedisKeyUtil;
 import org.apache.kafka.common.internals.Topic;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.connection.RedisStringCommands;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.web.config.EnableSpringDataWebSupport;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.io.PipedOutputStream;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -34,6 +38,9 @@ public class LikeController implements CommunityConstant {
 
     @Autowired
     private EventProducer eventProducer;
+
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     @RequestMapping(path = "/like", method = RequestMethod.POST)
     @ResponseBody                   //点赞是异步请求 不用刷新整个页面
@@ -62,6 +69,10 @@ public class LikeController implements CommunityConstant {
             eventProducer.fireEvent(event);
         }
 
+        if (entityType  == ENTITY_TYPE_POST){
+            String redisKey = RedisKeyUtil.getPostScoreKey();
+            redisTemplate.opsForSet().add(redisKey, postId);
+        }
         //返回一个json格式的数据
         return CommunityUtil.getJSONString(0, null, map);       //状态0成功 消息为空 map数据返回给页面
     }
