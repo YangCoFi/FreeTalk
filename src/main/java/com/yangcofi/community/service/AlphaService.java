@@ -143,8 +143,8 @@ public class AlphaService {
     }
 
     //让这个方法定时地去执行
-    @Scheduled(initialDelay = 10000, fixedRate = 1000)
-    public void execute2(){
-        logger.debug("execute2");
-    }
+//    @Scheduled(initialDelay = 10000, fixedRate = 1000)
+//    public void execute2(){
+//        logger.debug("execute2");
+//    }
 }

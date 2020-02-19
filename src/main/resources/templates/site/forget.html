@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="icon" href="https://static.nowcoder.com/images/logo_87_87.png"/>
+	<link rel="icon" th:href="@{/img/index.png}"/>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
 	<link rel="stylesheet" th:href="@{/css/global.css}" />
 	<link rel="stylesheet" th:href="@{/css/login.css}" />
@@ -104,7 +104,7 @@
 		</div>
 
 		<!-- 尾部 -->
-		<footer class="bg-dark">
+		<footer class="bg-dark" th:replace="index::footer">
 			<div class="container">
 				<div class="row">
 					<!-- 二维码 -->
@@ -172,8 +172,30 @@
 	<script th:src="@{/js/global.js}"></script>
 	<script>
         function getVerificationCode() {
-            var path = CONTEXT_PATH + "/kaptcha?p=" + Math.random();			//Jquery  BootStrap  加上?p欺骗浏览器让它认为改变了
-            $("#kaptcha").attr("src", path);
+			var targetEmail = $("#your-email").val();
+			if (checkEmail(targetEmail)){
+                $.post(
+                    CONTEXT_PATH + "/forget/getVerificationCode",
+                    {"email":targetEmail},
+                    function (data) {
+                        data = $.parseJSON(data);
+                        if (data.code == 0){
+                            alert(data.msg);
+                        }
+                    }
+                )
+			}else {
+				alert("邮箱格式不对，请重新输入！")
+			}
+        }
+
+        function checkEmail(email) {
+			var reg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+        	if (reg.test(email)){
+        	    return true;
+			}else {
+        	    return false;
+			}
         }
 	</script>
 </body>

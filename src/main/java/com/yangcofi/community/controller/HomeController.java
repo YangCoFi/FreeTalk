@@ -34,6 +34,7 @@ public class HomeController implements CommunityConstant {
     @Autowired
     private LikeService likeService;
 
+    //页面向服务器传参 像Page 会自动转换为Page对象属性 是SpringMVC底层有很多参数转换器
     @RequestMapping(path = "/index", method = RequestMethod.GET)
     public String getIndexPage(Model model, Page page,
                                @RequestParam(name = "orderMode", defaultValue = "0") int orderMode) {         // 方法调用钱,SpringMVC会自动实例化Model和Page,并将Page注入Model.

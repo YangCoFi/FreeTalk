@@ -2,11 +2,13 @@ package com.yangcofi.community.controller;
 
 import com.google.code.kaptcha.Producer;
 import com.yangcofi.community.entity.User;
+import com.yangcofi.community.service.CommonService;
 import com.yangcofi.community.service.UserService;
 import com.yangcofi.community.util.CommunityConstant;
 import com.yangcofi.community.util.CommunityUtil;
 import com.yangcofi.community.util.RedisKeyUtil;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.kafka.common.protocol.types.Field;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,14 +17,13 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.CookieValue;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import javax.imageio.ImageIO;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -43,6 +44,9 @@ public class LoginController implements CommunityConstant {
 
     @Autowired
     UserService userService;
+
+    @Autowired
+    CommonService commonService;
 
     @Autowired
     private Producer kaptchaProducer;
@@ -177,10 +181,33 @@ public class LoginController implements CommunityConstant {
         return "/site/forget";
     }
 
-//    @RequestMapping(path = "/forget", method = RequestMethod.POST)
-//    public String forget(String email, ){
-//
-//    }
+    @RequestMapping(path = "/forget/getVerificationCode", method = RequestMethod.POST)
+    @ResponseBody
+    public String getVerificationCode(String email, HttpSession session){
+        if (StringUtils.isBlank(email)){
+            return CommunityUtil.getJSONString(-1, "请求邮箱不能为空值！");
+        }
+        String verCode = CommunityUtil.generateUUID().substring(0, 6);
+        session.setAttribute("verCode", verCode);
+        session.setAttribute("email", email);
+        commonService.sendVerifyEmail(email, verCode);
+        return CommunityUtil.getJSONString(0, "验证邮件发送成功！");
+    }
+
+    @RequestMapping(path = "/forget", method = RequestMethod.POST)
+    public String forget(String email, String code, String password, HttpSession session){
+        System.out.println(session.getAttribute("email") + "--------------------------------");
+        if (!StringUtils.isBlank(email) && email.equals(session.getAttribute("email"))){
+            User targetUser = commonService.getUserByEmail(email);
+            String changePwd = CommunityUtil.md5(password + targetUser.getSalt());
+            if (code.equals(session.getAttribute("verCode"))){
+                commonService.updatePwdById(targetUser.getId(), changePwd);
+            }
+            return "redirect:/login";
+        }else {
+            return "redirect:/forget";
+        }
+    }
 }
 
 /**

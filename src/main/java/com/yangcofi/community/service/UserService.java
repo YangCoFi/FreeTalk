@@ -1,6 +1,5 @@
 package com.yangcofi.community.service;
 
-import com.jhlabs.image.GradientFilter;
 import com.yangcofi.community.dao.LoginTicketMapper;
 import com.yangcofi.community.dao.UserMapper;
 import com.yangcofi.community.entity.LoginTicket;
@@ -10,7 +9,6 @@ import com.yangcofi.community.util.CommunityUtil;
 import com.yangcofi.community.util.MailClient;
 import com.yangcofi.community.util.RedisKeyUtil;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.ibatis.ognl.ASTThisVarRef;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
