@@ -1,7 +1,6 @@
 package com.yangcofi.community.service;
 
 import com.yangcofi.community.util.RedisKeyUtil;
-import org.apache.kafka.common.protocol.types.Field;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.connection.RedisConnection;

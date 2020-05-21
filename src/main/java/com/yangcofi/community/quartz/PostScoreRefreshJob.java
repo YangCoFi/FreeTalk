@@ -6,7 +6,6 @@ import com.yangcofi.community.service.ElasticsearchService;
 import com.yangcofi.community.service.LikeService;
 import com.yangcofi.community.util.CommunityConstant;
 import com.yangcofi.community.util.RedisKeyUtil;
-import org.quartz.DailyTimeIntervalScheduleBuilder;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;

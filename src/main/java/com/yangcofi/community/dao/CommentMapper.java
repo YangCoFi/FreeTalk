@@ -1,6 +1,7 @@
 package com.yangcofi.community.dao;
 
 import com.yangcofi.community.entity.Comment;
+import org.apache.ibatis.annotations.CacheNamespace;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
