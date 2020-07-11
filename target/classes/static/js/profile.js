@@ -5,7 +5,7 @@ $(function(){
 function follow() {
 	var btn = this;			//方法里首先获取当前的按钮
 	if($(btn).hasClass("btn-info")) {		//如果按钮的样式是btn-info（蓝色的样式）
-		// 关注TA
+		//
 		$.post(
 			CONTEXT_PATH + "/follow",
 			{"entityType":3, "entityId":$(btn).prev().val()},							//因为是关注人		//entityId  这个我们从html中获取 而页面上没有显示id，没地方取，这里我们在button之前加一个隐藏框
@@ -33,6 +33,6 @@ function follow() {
                 }
             }
         );
-		// $(btn).text("关注TA").removeClass("btn-secondary").addClass("btn-info");
+		// $(btn).text("").removeClass("btn-secondary").addClass("btn-info");
 	}
 }

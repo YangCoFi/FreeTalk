@@ -9,8 +9,6 @@ import com.yangcofi.community.service.ElasticsearchService;
 import com.yangcofi.community.service.MessageService;
 import com.yangcofi.community.util.CommunityConstant;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.common.protocol.types.Field;
-import org.omg.CORBA.PUBLIC_MEMBER;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

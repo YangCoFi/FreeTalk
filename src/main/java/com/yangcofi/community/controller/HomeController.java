@@ -34,6 +34,11 @@ public class HomeController implements CommunityConstant {
     @Autowired
     private LikeService likeService;
 
+    @RequestMapping(path = "/", method = RequestMethod.GET)
+    public String root(){
+        return "forward:/index";
+    }
+
     //页面向服务器传参 像Page 会自动转换为Page对象属性 是SpringMVC底层有很多参数转换器
     @RequestMapping(path = "/index", method = RequestMethod.GET)
     public String getIndexPage(Model model, Page page,

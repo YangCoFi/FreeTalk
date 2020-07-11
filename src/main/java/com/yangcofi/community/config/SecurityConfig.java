@@ -65,7 +65,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter implements Comm
                 )
                 .antMatchers(
                         "/discuss/delete",
-                        "/data/**"  //凡是以data开头的都不能访问
+                        "/data/**", //凡是以data开头的都不能访问
+                        "/actuator/**"      //只要是以actuator打头的都是只有管理员才能访问的
                 ).hasAnyAuthority(
                         AUTHORITY_ADMIN
                 )

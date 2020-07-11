@@ -21,34 +21,34 @@ public class AlphaAspect {
 
     @Before("pointCut()")               //在切点(pointCut())前面植入代码
     public void before(){
-        System.out.println("before");
+//        System.out.println("before");
     }
 
     @After("pointCut()")
     public void after(){
-        System.out.println("after");
+//        System.out.println("after");
     }
 
 
     //有了返回值以后我还想处理一些逻辑
     @AfterReturning("pointCut()")
     public void afterReturning(){
-        System.out.println("afterReturning");
+//        System.out.println("afterReturning");
     }
 
     //在抛异常的时候植入代码
     @AfterThrowing("pointCut()")
     public void afterThrowing(){
-        System.out.println("afterThrowing");
+//        System.out.println("afterThrowing");
     }
 
     @Around("pointCut()")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable{      //ProceedingJoinPoint 目标植入的部位 也就是连接点
-        System.out.println("around before");
+//        System.out.println("around before");
         //连接点指代的是程序植入的部位
         Object obj = joinPoint.proceed();        //调用目标组件的方法。 目标组件可能有返回值
         //因为程序再执行的时候会植入一个代理对象 所以这个逻辑被植入到那个代理对象obj里面了 用来代替原始对象
-        System.out.println("around after");
+//        System.out.println("around after");
         return obj;
     }
 }
